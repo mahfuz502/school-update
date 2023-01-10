@@ -13,6 +13,26 @@
                 </tree>
             </field>
         </record>
+        <record id="my_school_form_view" model="ir.ui.view">
+            <field name="name">Student list</field>
+            <field name="model">school.student</field>
+            <field name="priority" eval="7"/>
+            <field name="arch" type="xml">
+                <form string="Model Name">
+                    <group>
+                        <group>
+                           <field name="name"/>
+                           <field name="email"/>
+                           <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="birth_date"/>
+                       </group>
+                    </group>
+                </form>
+            </field>
+        </record>
         <record model="ir.actions.act_window" id="open_view_student_tree">
             <field name="name">Student</field>
 <!--            <field name="name">ir.action.act_window</field>-->
